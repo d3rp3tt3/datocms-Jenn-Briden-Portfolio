@@ -46,12 +46,12 @@ module.exports = (dato, root, i18n) => {
     intro: dato.home.introText,
     copyright: dato.home.copyright,
     // iterate over all the `social_profile` item types
-    //socialProfiles: dato.socialProfiles.map(profile => {
-      //return {
-        //type: profile.profileType.toLowerCase().replace(/ +/, '-'),
-        //url: profile.url,
-      //};
-    //}),
+    socialProfiles: dato.socialProfiles.map(profile => {
+      return {
+        type: profile.profileType.toLowerCase().replace(/ +/, '-'),
+        url: profile.url,
+      };
+    }),
     faviconMetaTags: toHtml(dato.site.faviconMetaTags),
     seoMetaTags: toHtml(dato.home.seoMetaTags)
   });
@@ -92,4 +92,3 @@ module.exports = (dato, root, i18n) => {
     });
   });
 };
-
