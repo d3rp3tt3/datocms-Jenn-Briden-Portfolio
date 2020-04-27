@@ -51,7 +51,7 @@ module.exports = (dato, root, i18n) => {
         //type: profile.profileType.toLowerCase().replace(/ +/, '-'),
         //url: profile.url,
       //};
-    }),
+    //}),
     faviconMetaTags: toHtml(dato.site.faviconMetaTags),
     seoMetaTags: toHtml(dato.home.seoMetaTags)
   });
